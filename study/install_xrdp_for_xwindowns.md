@@ -1,14 +1,14 @@
-###1、环境检查
+### 1、环境检查
 关闭selinux、关闭防火墙、关闭NetworkManager、检查系统版本cat /etc/redhat-release 
 
-###2
+### 2
     测试能上公网
     ping www.baidu.com
     配置DNS
     vim /etc/resolv.conf
     nameserver 114.114.114.114
 
-###3、配置阿里yum源（本例）或使用本地yum源
+### 3、配置阿里yum源（本例）或使用本地yum源
 ```shell
 vim /etc/yum.repos.d/CentOS-Base.repo 
 # CentOS-Base.repo
@@ -57,17 +57,18 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 ```
 
-###4、安装epel包
-yum install epel-release
+### 4、安装epel包
+`yum install epel-release`
 
-###5、更新或者安装nux-dextop软件
+### 5、更新或者安装nux-dextop软件
 ```shell
 rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 ```
 
-###6、搭建nux-dextop的源头为安装xrdp做准备
-```shell
+### 6、搭建nux-dextop的源头为安装xrdp做准备
+
 vim /etc/yum.repos.d/xrdp.repo
+```shell
 [xrdp]
 name=xrdp
 baseurl=http://li.nux.ro/download/nux/dextop/el7/x86_64/
@@ -75,18 +76,23 @@ enabled=1
 gpgcheck=0
 ```
 
-###7、安装xrdp、vnc两个软件
-yum install xrdp tigervnc-server 
+### 7、安装xrdp、vnc两个软件
+`yum install xrdp tigervnc-server `
 
-###8、启动服务，添加开机启动项
+### 8、启动服务，添加开机启动项
+```shell
 systemctl start xrdp.service
 systemctl enable xrdp.service 
 systemctl status xrdp.service 
-###9、查看xrdp服务是否开启
-netstat -antup | grep xrdp 
+```
+### 9、查看xrdp服务是否开启
 
-###10、添加防火墙本例使用firewalld，也可使用iptables
+`netstat -antup | grep xrdp `
+
+### 10、添加防火墙本例使用firewalld，也可使用iptables
+```shell
 firewall-cmd --permanent --zone=public --add-port=3389/tcp
 firewall-cmd --reload
+```
 
-11、登录测试在win使用mstsc输入对应的ip即可
+### 11、登录测试在win使用mstsc输入对应的ip即可
