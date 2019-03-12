@@ -1,6 +1,24 @@
 
 [TOC]
 
+Tags： 数学 英语     Markdown
+
+```python
+@requires_authorization
+def somefunc(param1='', param2=0):
+    '''A docstring'''
+    if param1 > param2: # interesting
+        print 'Greater'
+    return (param2 - param1 + 1) or None
+
+class SomeClass:
+    pass
+
+>>> message = '''interpreter
+... prompt'''
+```
+
+
 >### 1、环境检查
 关闭selinux、关闭防火墙、关闭NetworkManager、检查系统版本cat /etc/redhat-release 
 
@@ -11,7 +29,9 @@
 
 配置DNS
 
-`vim /etc/resolv.conf`
+```bash
+vim /etc/resolv.conf
+```
 
     nameserver 114.114.114.114
 
@@ -32,7 +52,8 @@
 # remarked out baseurl= line instead.
 #
 #
-
+```
+```bash
 [base]
 name=CentOS-$releasever - Base
 mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=osinfra=$infra
