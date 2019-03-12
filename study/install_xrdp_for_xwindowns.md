@@ -9,7 +9,7 @@
     nameserver 114.114.114.114
 
 3、配置阿里yum源（本例）或使用本地yum源
-
+```shell
 vim /etc/yum.repos.d/CentOS-Base.repo 
 # CentOS-Base.repo
 #
@@ -55,6 +55,7 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
+```
 
 4、安装epel包
 yum install epel-release
