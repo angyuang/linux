@@ -1,7 +1,7 @@
 ># **介绍**
 DenyHosts是Python语言写的一个程序，它会分析sshd的日志文件（`/var/log/secure`），当发现重复的攻击时就会记录IP到`/etc/hosts.deny`文件，从而达到自动屏IP的功能。
 
-DenyHosts（项目主页：[http://denyhosts.sourceforge.net/]）是运行于Linux上的一款预防SSH暴力破解的软件，可以从[http://sourceforge.net/projects/denyhosts/files/]进行下载，然后将下载回来的DenyHosts-2.6.tar.gz源码包上传到Linux系统中
+DenyHosts项目主页：<http://denyhosts.sourceforge.net>是运行于Linux上的一款预防SSH暴力破解的软件，可以从<http://sourceforge.net/projects/denyhosts/files>进行下载，然后将下载回来的DenyHosts-2.6.tar.gz源码包上传到Linux系统中
 
 ># **功能**
 
@@ -145,11 +145,11 @@ DAEMON_PURGE = 5m
 ```
 
 ># **其他**
-[https://www.server-memo.net/server-setting/ssh/ssh-denyhosts.html]
+<https://www.server-memo.net/server-setting/ssh/ssh-denyhosts.html>
 
-[http://www.cnblogs.com/suihui/p/3899381.html]
+<http://www.cnblogs.com/suihui/p/3899381.html>
 
-[https://meetes.top/2018/08/05/CentOS7%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E7%AF%87]
+<https://meetes.top/2018/08/05/CentOS7%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%BA%E6%9C%AC%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E7%AF%87>
 
-[https://blog.csdn.net/qq_41729148/article/details/88750014]
+<https://blog.csdn.net/qq_41729148/article/details/88750014>
 
