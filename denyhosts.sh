@@ -116,9 +116,9 @@ echo "--------------------------------------------------------------------------
 chkconfig denyhosts on
 chkconfig --list denyhosts
 
-#allow ip
+#allow www.baidu.com ip
 echo "-------------------------------------------------------------------------------------------Allow"
-echo -e "sshd:36.111.88.33\nsshd:10.0.0.0/8" >> /etc/hosts.allow
+echo -e "sshd:220.181.111.37\nsshd:192.168.1.0/24" >> /etc/hosts.allow
 
 #restart other server
 echo "-------------------------------------------------------------------------------------------Other server"
